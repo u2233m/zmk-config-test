@@ -19,4 +19,5 @@
 #
 ---
 include:
-  - board: nice_nano@2.0.0
+  - board: supermini_nrf52840
+    shield: my_hardware
