@@ -1,5 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <dt-bindings/gpio/nordic-nrf-gpio.h>
+#include <dt-bindings/input/input-event-codes.h>
 
 / {
     chosen {
@@ -44,6 +45,9 @@
         compatible = "pixart,paw3395";
         reg = <0>;
         spi-max-frequency = <2000000>;
+        
+        evt-type = <INPUT_EV_REL>;
+        
         irq-gpios = <&gpio1 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; 
     };
 };
